@@ -1,6 +1,6 @@
-# Comprehensive Guide For Triplet Loss Function
+# Triplet Loss Function for embedding space learning
 
-In this blog, a full guide for the triplet loss function that gained special attention lately for its importance in face recognition and verification tasks. The blog discuss the triplets variations and different mining techniques. Then, some advanced notes about the soft margin from [1](https://arxiv.org/pdf/1703.07737.pdf), and Improved triplet loss from [2](https://openaccess.thecvf.com/content_cvpr_2016/papers/Cheng_Person_Re-Identification_by_CVPR_2016_paper.pdf). Finally, the visualization of trained embeddings from the GitHub Gist [Mnist Embeddings Visualization using Semi-Hard Triplet Loss](https://gist.github.com/AhmedAbdel-Aal/794d6f9c004bd07762975db580734a44). 
+In this blog, a full guide for the triplet loss function that gained special attention lately for its importance in face recognition and verification tasks. The blog discuss the triplets variations and different mining techniques. Then, some advanced notes about the soft margin from [1](https://arxiv.org/pdf/1703.07737.pdf), and Improved triplet loss from [2](https://openaccess.thecvf.com/content_cvpr_2016/papers/Cheng_Person_Re-Identification_by_CVPR_2016_paper.pdf). Finally, the visualization of trained embeddings from the GitHub Gist [Mnist Embeddings Visualization using Semi-Hard Triplet Loss](https://github.com/AhmedAbdel-Aal/DeepLearning_home/blob/main/Triplet%20Loss/Mnist_Embeddings_Visualization_using_Semi_Hard_Triplet_Loss.ipynb). 
 
 ## table of contents
 
@@ -12,7 +12,7 @@ In this blog, a full guide for the triplet loss function that gained special att
 
   2- [Triplets variation](#2-triplets-variation)
 
-  3- [Triplets mining techniques](#3-triplets mining techniques)
+  3- [Triplets mining techniques](#3-triplets-mining-techniques)
 
   4- [Advanced Notes](#4-advanced-notes)
 
@@ -22,11 +22,11 @@ In this blog, a full guide for the triplet loss function that gained special att
 
 ​		 - [Embedding visualization](#embedding-visualization)
 
-  5-[Resources](#resources)
+  5-[Resources](#5-resources)
 
 
 
-## 1- What is Triplet Loss Function
+## 1-What is Triplet Loss Function
 
 
 
@@ -118,7 +118,7 @@ A practical intuition of what triplet loss do in face recognition is, if we appl
 
 
 
-# 2- Triplets variation
+# 2-Triplets variation
 
 Triplets variations means that there are more than one type of triplets that you can collect from your data. First of all, we have a base rule that defines that triplets as anchor, positive example and negative example. The variations comes when which exactly positive examples from all the positives that you can choose at each time, and which exactly the negative example that you can choose from all the negative examples that you have. 
 
@@ -146,7 +146,7 @@ we have three kind of triplets that we can generate :
 
 ​											![image](https://drive.google.com/uc?export=view&id=1_c9ujsS707m3NEXyp6unqFfofWkErqyu)
 
-# 3- Triplets mining techniques
+# 3-Triplets mining techniques
 
 
 
@@ -217,7 +217,7 @@ Select all the possible combination of triplets (hard, and semi-hard).
 
 
 
-# 4- Advanced Notes
+# 4-Advanced Notes
 
 #### Soft margin
 
@@ -298,7 +298,7 @@ Also the embeddings are plotted before each epoch to monitor how the triplet-los
 
 
 
-# 5- Resources
+# 5-Resources
 
 1-  [In Defense of the Triplet Loss for Person Re-Identification](https://arxiv.org/pdf/1703.07737.pdf)
 
