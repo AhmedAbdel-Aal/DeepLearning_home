@@ -44,7 +44,7 @@ First of all, let's create a model that takes an image as inputs and output an e
 
 
 
-![image](https://drive.google.com/uc?export=view&id=1HB6PiWOggdAnYGttz3fwYCXbmGWlb5s3)
+![image](https://github.com/AhmedAbdel-Aal/DeepLearning_home/blob/main/Triplet%20Loss/images/s.png)
 
 
 
@@ -52,7 +52,7 @@ Then let's create two instances of that model, and pass the two corresponding em
 
 
 
-![image](https://drive.google.com/uc?export=view&id=1VbYR3zxcjK9EhiNLCBV4x7nxdvgFnPMp)
+![image](https://github.com/AhmedAbdel-Aal/DeepLearning_home/blob/main/Triplet%20Loss/images/siamese.png)
 
 
 
@@ -92,19 +92,19 @@ That's from where the name "triplets" came. Then, we need to minimize the distan
 
 
 
-![image](https://drive.google.com/uc?export=view&id=10S7f7oG7gkhT5I0rwwV75i8HHIlVuiJ6)
+![image](https://github.com/AhmedAbdel-Aal/DeepLearning_home/blob/main/Triplet%20Loss/images/derivation%20without%20margin.PNG)
 
 
 
 The previous inequality is satisfied when the d(A,N) is bigger than the d(A,P). However, there is a trivial solution that also satisfies the equation, which is both the distances are equal to zero. To prevent the trained model from this trivial solution, a new parameter called "margin" is introduced, so that the new derivation would be like: 
 
-![image](https://drive.google.com/uc?export=view&id=1gbmTgkFCuAGLp5nHtZwJgBjLlz-b7LFN)
+![image](https://github.com/AhmedAbdel-Aal/DeepLearning_home/blob/main/Triplet%20Loss/images/derivation%20with%20margin.PNG)
 
 To formulate this requirement into a function, the hinge function is used. The hinge function assure that if the triplets already follow our requirements, then no loss (zero loss) is detected.
 
 
 
-![image](https://raw.githubusercontent.com/AhmedAbdel-Aal/blog/master/images/triplets_3.PNG)
+![image](https://github.com/AhmedAbdel-Aal/DeepLearning_home/blob/main/Triplet%20Loss/images/TL.PNG)
 
 
 
@@ -112,7 +112,7 @@ A practical intuition of what triplet loss do in face recognition is, if we appl
 
 
 
-![image](https://raw.githubusercontent.com/AhmedAbdel-Aal/blog/master/images/2%20persons%20embeddings.png)
+![image](https://github.com/AhmedAbdel-Aal/AhmedAbdel-Aal.github.io/blob/master/images/2-persons-embeddings.png)
 
 
 
@@ -136,15 +136,15 @@ we have three kind of triplets that we can generate :
 
 \- ***Easy Triplets*** these triplets results in zero loss because they are already satisfying the loss function i.e., the negative example has bigger distance than the positive example plus the margin
 
-​												![image](https://drive.google.com/uc?export=view&id=1QIDMn2RKtd8dUq3oUaZsK8jiS7vyn4BT)
+​												![image](https://github.com/AhmedAbdel-Aal/DeepLearning_home/blob/main/Triplet%20Loss/images/easy-triplets.PNG)
 
 \- ***Semi-Hard Triplets*** the negative example is not closer to the anchor more than the positive, but the negative example has smaller distance than the positive example plus the margin
 
-![image](https://drive.google.com/uc?export=view&id=1KcAgsb4ikrSWEEMiUH1GLf33c99Bm4Ha)
+![image](https://github.com/AhmedAbdel-Aal/DeepLearning_home/blob/main/Triplet%20Loss/images/semi-hard%20triplets.PNG)
 
 \- ***Hard Triplets*** The nearest negative example and the farthest positive example to the anchor are chosen
 
-​											![image](https://drive.google.com/uc?export=view&id=1_c9ujsS707m3NEXyp6unqFfofWkErqyu)
+​											![image](https://github.com/AhmedAbdel-Aal/DeepLearning_home/blob/main/Triplet%20Loss/images/hard%20triplets.PNG)
 
 # 3-Triplets mining techniques
 
@@ -166,7 +166,7 @@ First we create list of triplets (a,p,n), whatever the type of triplets we need 
 
 
 
-![image](https://drive.google.com/uc?export=view&id=1n7F5DikevmGsKhQgeM4sQ9bxJdI6zYT_)
+![image](https://github.com/AhmedAbdel-Aal/DeepLearning_home/blob/main/Triplet%20Loss/images/offline-mining.png)
 
 
 
@@ -193,7 +193,7 @@ The idea of Online mining is to overcome the computation and memory drawback of 
 
 
 
-![image](https://drive.google.com/uc?export=view&id=1Ikmr3rC0T7WIs1yTiKcrD-Rdlui6RpS5)
+![image](https://github.com/AhmedAbdel-Aal/DeepLearning_home/blob/main/Triplet%20Loss/images/offline-mining.png)
 
 
 
@@ -247,7 +247,7 @@ In [Person Re-Identification by Multi-Channel Parts-Based CNN with Improved Trip
 
 For this reason a new margin **m2** which is much smaller than the first margin **m1** is used to pull the instances  of the same class more closer. The new triplet loss equation would be:
 
-![image](https://drive.google.com/uc?export=view&id=1JQ74vNel4s594jxGjDVlWe-neLRQ_MaQ)
+![image](https://github.com/AhmedAbdel-Aal/DeepLearning_home/blob/main/Triplet%20Loss/images/improved%20TL.PNG)
 
 **Note:** The previous equation is from [here](https://openaccess.thecvf.com/content_cvpr_2016/papers/Cheng_Person_Re-Identification_by_CVPR_2016_paper.pdf), and it is modified to match the blog notations.
 
@@ -284,13 +284,13 @@ embedding_network = tf.keras.Sequential([
 
 Two principal components of these embedding vectors are then visualized before and after training.
 
-![image](https://drive.google.com/uc?export=view&id=134uL5pSQ2dgC5lIcvUAFCJd5W_KF2e5s)
+![image](https://github.com/AhmedAbdel-Aal/DeepLearning_home/blob/main/Triplet%20Loss/images/before-after.png)
 
 Also the embeddings are plotted before each epoch to monitor how the triplet-loss affects the embeddings of the same class to be pulled towards each other, and the dissimilar classes to be pushed away from each other.
 
 
 
-![image](https://drive.google.com/uc?export=view&id=1Rs7xvCvBTUyotSBRU4akcD_y5wd2-XTR)
+![image](https://github.com/AhmedAbdel-Aal/DeepLearning_home/blob/main/Triplet%20Loss/images/Embeddings_over_training.gif)
 
 
 
